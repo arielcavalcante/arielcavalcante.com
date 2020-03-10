@@ -57,7 +57,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
-    "gatsby-plugin-offline",
+    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-catch-links",
