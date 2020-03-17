@@ -6,40 +6,33 @@ import theme from "../../theme"
 
 const Wrapper = nest(
   styled.footer`
-  color: ${theme.lightBackgroundColor};
-  font-family: ${theme.titleFont};
   text-align: center;
+  font-family: ${theme.titleFont};
   background: ${theme.secondaryColor};
   height: 100%;
   display: block;
-  margin-bottom: 0;
   position: relative;
+  padding: 3.75rem 0;
+  margin-bottom: 0;
 
     ul {
-      margin: auto;
-      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      
 
       li {
         list-style: none;
         font-size: 1rem;
 
         &:first-child {
-          margin-top: 0;
+ 
+           margin-top: 0;
         }
         
         a {
           text-decoration: none;
           text-transform: lowercase;
         }
-      }
-    }
-
-    @media (min-width: 43.75rem) {
-      ul {
-        display: flex;
-        flex-direction: row;
-        width: 75%;
-        padding: 1.25rem 0;
       }
     }
     @media (max-width: 43.75rem) {
@@ -57,6 +50,15 @@ const Wrapper = nest(
           &:not(:first-child){
             padding-top: 1rem; 
         }
+      }
+    }
+
+    @media (min-width: 43.75rem) {
+      ul {
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        padding: 1.25rem 0;
       }
     }
   `,
