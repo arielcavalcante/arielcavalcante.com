@@ -11,14 +11,14 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1rem;
     font-family: "Museo Sans";
-    color: ${titleColor};
-    background-color: #fff;
+    color: ${theme.textColor};
+    background-color: ${theme.lightBGColor};
     width: 100%;
   }
 `
 
 export const Wrapper = styled.div`
-  width: 85%;
+  width: 68.75rem;
   margin: 0.625rem auto;
 `
 
@@ -51,7 +51,6 @@ export const TagList = styled.ul`
     flex-grow: 1;
     -webkit-print-color-adjust: exact;
      margin: .325rem;
-
   }
 `
 
@@ -154,12 +153,12 @@ export const ContentTitle = styled.div`
   color: ${titleColor};
   text-transform: uppercase;
   font-weight: bolder;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   margin-bottom: 1rem;
 `
 
 export const Job = styled.div`
-  margin-bottom: 2.25rem;
+  margin-bottom: 2.1875rem;
   font-size: 0.875rem;
 `
 
@@ -175,9 +174,9 @@ export const CompanyName = styled.div`
 `
 
 export const JobDescription = styled.div`
-  padding-top: 0.6rem;
+  padding-top: 0.625rem;
 
   p {
-    margin: 0 0 0.6rem 0;
+    margin: 0 0 0.625rem 0;
   }
 `

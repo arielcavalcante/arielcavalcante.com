@@ -2,24 +2,25 @@ import React from "react"
 import { nest } from "recompose"
 import styled from "styled-components"
 import theme from "../../theme"
+import Wrap from "../wrap"
 import Tool from "./tool"
 
 const tools = [
   {
     link: "https://facebook.github.io/react",
     name: "React",
-    logo: require("./react.svg"),
+    logo: require("./react.svg")
   },
   {
     link: "https://gatsbyjs.org",
     name: "GatsbyJS",
-    logo: require("./gatsby.svg"),
+    logo: require("./gatsby.svg")
   },
   {
     link: "https://www.netlify.com",
     name: "Netlify",
-    logo: require("./netlify.svg"),
-  },
+    logo: require("./netlify.svg")
+  }
 ]
 
 const Wrapper = nest(
@@ -49,7 +50,8 @@ const Wrapper = nest(
       font-weight: 500;
       text-decoration: none;
     }
-  `
+  `,
+  Wrap
 )
 
 const Info = styled.div`
@@ -63,7 +65,7 @@ const Info = styled.div`
 
 const ToolList = styled.div`
   display: flex;
-  margin-top: 1.5rem;
+  margin-top: 1.5625rem;
 
   & > * {
     margin: 0 1rem;

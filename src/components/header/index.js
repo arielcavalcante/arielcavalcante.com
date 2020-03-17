@@ -8,7 +8,7 @@ import theme from "../../theme"
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/cv/", label: "Resume" },
+  { to: "/cv/", label: "Resume" }
 ]
 
 const Wrapper = nest(
@@ -17,6 +17,7 @@ const Wrapper = nest(
     z-index: 2;
     top: 0;
     left: 0;
+    width: 100%;
     height: ${theme.headerHeight}rem;
     background-color: ${p =>
       p.showShadow ? theme.darkBackgroundColor : "transparent"};
@@ -27,7 +28,6 @@ const Wrapper = nest(
       p.showShadow ? "0 0 .125rem 0 rgba(0,0,0,0.4)" : "unset"};
     transition: box-shadow 300ms linear, background-color 300ms linear;
     border-top: 0.25rem solid ${theme.baseColor};
-    width: 100%;
     display: flex;
     flex-grow: 0;
     flex-wrap: wrap;
@@ -44,7 +44,6 @@ const Wrapper = nest(
           color: ${theme.baseColor};
         }
       }
-    }
   `,
   styled(Wrap)`
     height: 100%;
@@ -115,7 +114,7 @@ const Menu = styled.nav`
 
   @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
     li {
-      margin-right: 0.625rem;
+      margin-right: .625rem;
     }
   }
 `

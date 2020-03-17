@@ -6,8 +6,9 @@ import theme from "../../theme"
 
 const Wrapper = nest(
   styled.footer`
-  text-align: center;
   font-family: ${theme.titleFont};
+  text-align: center;
+  color: ${theme.titleColor};
   background: ${theme.secondaryColor};
   height: 100%;
   display: block;
@@ -18,6 +19,7 @@ const Wrapper = nest(
     ul {
       margin: 0;
       padding: 0;
+    }
       
 
       li {
@@ -25,7 +27,6 @@ const Wrapper = nest(
         font-size: 1rem;
 
         &:first-child {
- 
            margin-top: 0;
         }
         
@@ -67,16 +68,16 @@ const Wrapper = nest(
 
 const Popover = styled.div`
   background-color: ${theme.baseColor};
-  color: #fff;
+  color: #f9f;
   font-size: 1.15rem;
   font-family: "Poppins";
   font-weight: 700;
   width: 18.75rem;
   border-radius: 0.375rem;
-  box-shadow: 0 0 1rem rgba(10, 10, 0, 0.25);
   padding: 1.15rem 0.6rem;
-  position: absolute;
+  box-shadow: 0 0 1rem rgba(10, 10, 0, 0.25);
   display: block;
+  position: absolute;
   left: calc(50% - 9.375rem);
   pointer-events: none;
 

@@ -31,6 +31,7 @@ const IntroText = styled.div`
   }
 `
 
+
 const IndexContent = () => (
   <>
     <SEO largeShareCard />
@@ -39,7 +40,8 @@ const IndexContent = () => (
       backgroundImage="/img/coverBackground.jpg"
       hero="Hey,"
       title="My name is Ariel"
-      subtitle="Overwatch Tanker and Healer. Dog and cat person. Beyhive and Little Monster. Perfectly balanced. As all things should be."
+      subtitle="Overwatch Tanker and Healer. Dog and cat person. Beyhive and Little Monster."
+      secondSubtitle="Perfectly balanced. As all things should be."
     />
     <Content>
       <Intro>

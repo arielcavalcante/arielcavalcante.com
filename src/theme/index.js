@@ -5,13 +5,19 @@ export default {
   blogMaxWidth: 40.625,
   baseColor: "#34A7B2",
   secondaryColor: "#F59AA3",
-  lightBackgroundColor: "#F5E4C3",
-  darkBackgroundColor: "#5B2E35",
-  darkBackgroundTextColor: "#F5E4C3",
-  darkBackgroundLinkHoverColor: "#F59AA3",
-  titleColor: "#34A7B2",
-  textColor: "#5B2E35",
-  workplaceTitle: "#34A7B2",
+
   titleFont: "Museo Sans",
   textFont: "Museo Slab",
+
+  titleColor: "#34A7B2",
+  textColor: "#5B2E35",
+  highlightedTextColor: "#34A7B2",
+
+  lightBGColor: "#F5E4C3",
+  lightBGTextColor: "#5B2E35",
+  lightBGLinkHoverColor: "#34A7B2",
+
+  darkBGColor: "#5B2E35",
+  darkBGTextColor: "#F5E4C3",
+  darkBGLinkHoverColor: "#F59AA3"
 }

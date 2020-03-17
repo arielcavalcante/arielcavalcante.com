@@ -17,7 +17,7 @@ import {
   Job,
   JobDetails,
   CompanyName,
-  JobDescription,
+  JobDescription
 } from "./components"
 
 const renderTech = (tech, index) => <li key={index}>{tech}</li>

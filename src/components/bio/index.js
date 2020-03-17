@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   strong {
     font-size: 1.1rem;
     font-family: ${theme.titleFont};
-    color: ${theme.highlightedTextColor};
+    color: ${theme.lightBackgroundColor};
   }
 
   p {

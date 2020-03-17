@@ -7,7 +7,7 @@ const Logo = styled.img`
 `
 
 const Wrapper = styled.a.attrs({
-  target: "_blank",
+  target: "_blank"
 })`
   display: flex;
   flex-direction: column;

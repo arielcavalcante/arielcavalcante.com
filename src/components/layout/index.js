@@ -1,7 +1,5 @@
-import React from "react"
-import { useEffect, useState } from "react"
-import styled from "styled-components"
-import { createGlobalStyle } from "styled-components"
+import React, { useEffect, useState } from "react"
+import styled, { createGlobalStyle } from "styled-components"
 import performantEventListener from "../../lib/performant-event-listener"
 import theme from "../../theme"
 import Header from "../header"
@@ -13,14 +11,17 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
+
   *,
   *:before,
   *:after {
     box-sizing: inherit;
   }
+
   body {
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
   }
 `
 
@@ -36,10 +37,12 @@ const Wrapper = styled.div`
   border-bottom: 0.5rem solid ${theme.baseColor};
   a {
     color: inherit;
+    
     &:hover {
       color: ${theme.secondaryColor};
     }
   }
+
   p {
     line-height: 1.5;
     margin-bottom: 1.25rem;

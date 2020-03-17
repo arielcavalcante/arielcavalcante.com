@@ -28,7 +28,7 @@ const Body = styled.div`
 
 const JobSection = styled.div`
   &:not(:last-child) {
-    border-bottom: 1rem solid #fff;
+    border-bottom: .0625rem solid #fff;
     padding-bottom: 1.875rem;
     margin-bottom: 1.875rem;
   }

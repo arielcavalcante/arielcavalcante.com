@@ -48,16 +48,7 @@ module.exports = {
         trackingId: "UA-140803948-3",
       },
     },
-    {
-      resolve: "gatsby-plugin-hotjar-tracking",
-      options: {
-        includeInDevelopment: false,
-        id: 1714650,
-        sv: 6,
-      },
-    },
     "gatsby-plugin-sharp",
-    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-catch-links",

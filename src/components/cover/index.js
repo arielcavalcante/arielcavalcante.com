@@ -23,8 +23,9 @@ const Wrapper = nest(
       `
       background-image: url(${p.backgroundImage});
       background-size: cover;
-      background-position: center center;
+      background-position: right top;
       min-height: 40vw;
+      max-height: 60vh;
       display: flex;
       flex-direction: column;
 
@@ -63,9 +64,15 @@ const Title = styled.div`
   color: ${theme.highlightedTextColor};
 `
 
-const Subtitle = styled.div`
+const SubtitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Subtitle = styled.span`
   font-size: 1.25rem;
   line-height: 1.4;
+  display: block;
 
   @media (max-width: 46.25rem) {
     font-size: 1rem;
@@ -76,13 +83,19 @@ const PageHeader = ({
   hero: heroText,
   title: titleText,
   subtitle: subtitleText,
+  secondSubtitle: secondSubtitleText,
   backgroundImage,
-  main,
+  main
 }) => (
   <Wrapper main={main} backgroundImage={backgroundImage}>
     {heroText && <Hero>{heroText}</Hero>}
     {titleText && <Title>{titleText}</Title>}
-    {subtitleText && <Subtitle>{subtitleText}</Subtitle>}
+    {subtitleText && <>
+      <SubtitleWrapper>
+        <Subtitle>{subtitleText}</Subtitle>
+        <Subtitle>{secondSubtitleText}</Subtitle>
+      </SubtitleWrapper>
+    </>}
   </Wrapper>
 )
 

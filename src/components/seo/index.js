@@ -20,7 +20,7 @@ const SEO = ({
   lang = "en",
   meta = [],
   keywords = [],
-  largeShareCard,
+  largeShareCard
 }) => (
   <StaticQuery
     query={detailsQuery}
@@ -43,23 +43,23 @@ const SEO = ({
               property: "og:image",
               content: largeShareCard
                 ? "https://arielcavalcante.com/img/share.jpg?n=1"
-                : "https://arielcavalcante.com/img/avatar.jpg?n=1",
+                : "https://arielcavalcante.com/img/avatar.jpg?n=1"
             },
             {
               name: `twitter:card`,
-              content: largeShareCard ? "summary_large_image" : "summary",
+              content: largeShareCard ? "summary_large_image" : "summary"
             },
             { name: `twitter:creator`, content: data.site.siteMetadata.author },
             { name: `twitter:title`, content: metaTitle.toLowerCase() },
             { name: `twitter:description`, content: metaDescription },
             { name: "twitter:site", content: "@aqueleariel" },
-            { name: "twitter:creator", content: "@aqueleariel" },
+            { name: "twitter:creator", content: "@aqueleariel" }
           ]
             .concat(
               keywords.length > 0
                 ? {
                     name: "keywords",
-                    content: keywords.join(`, `),
+                    content: keywords.join(`, `)
                   }
                 : []
             )
