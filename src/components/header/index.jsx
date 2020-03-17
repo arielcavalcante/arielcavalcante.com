@@ -17,7 +17,7 @@ const Wrapper = nest(
     z-index: 2;
     top: 0;
     left: 0;
-    height: ${theme.headerHeight}px;
+    height: ${theme.headerHeight}rem;
     background-color: ${p =>
       p.showShadow ? theme.darkBackgroundColor : "transparent"};
     color: ${theme.darkBackgroundTextColor};
@@ -49,7 +49,7 @@ const Wrapper = nest(
   styled(Wrap)`
     height: 100%;
 
-    @media (min-width: ${theme.headerBreakpoint}px) {
+    @media (min-width: ${theme.headerBreakpoint}rem) {
       display: flex;
       align-items: baseline;
 
@@ -62,7 +62,7 @@ const Wrapper = nest(
       }
     }
 
-    @media (max-width: ${theme.headerBreakpoint - 1}px) {
+    @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
       padding: 0.75rem 0;
     }
   `
@@ -76,7 +76,7 @@ const Logo = styled.h1`
   line-height: 1;
   margin: 0;
 
-  @media (max-width: ${theme.headerBreakpoint - 1}px) {
+  @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -106,14 +106,14 @@ const Menu = styled.nav`
     }
   }
 
-  @media (min-width: ${theme.headerBreakpoint}px) {
+  @media (min-width: ${theme.headerBreakpoint}rem) {
     & ul,
     li {
       height: 100%;
     }
   }
 
-  @media (max-width: ${theme.headerBreakpoint - 1}px) {
+  @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
     li {
       margin-right: 0.625rem;
     }

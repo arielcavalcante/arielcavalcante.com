@@ -7,7 +7,7 @@ const Avatar = styled(BaseAvatar)`
   width: 5.625rem;
   height: 5.625rem;
 
-  @media (max-width: ${theme.breakpoint - 1}px) {
+  @media (max-width: ${theme.breakpoint - .0625}rem) {
     align-self: center;
   }
 `
@@ -35,13 +35,13 @@ const Wrapper = styled.div`
     margin: 0;
   }
 
-  @media (max-width: ${theme.breakpoint - 1}px) {
+  @media (max-width: ${theme.breakpoint - .0625}rem) {
     flex-direction: column;
     justify-content: center;
 
     p {
       padding-left: 0;
-      margin-top: 30px;
+      margin-top: 1.875rem;
       text-align: center;
     }
   }
@@ -55,7 +55,7 @@ const Bio = () => (
         Meu blog pessoal <Emoji alt="emoji de coração preto" emoji="🖤" />
       </strong>
       <br />
-      Coisas sobre a vida, os dramas e alegrias de um homem trans designer web
+      Coisas sobre a vida, os dramas e alegrias de um homem trans digital designer
     </p>
   </Wrapper>
 )

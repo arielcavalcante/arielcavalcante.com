@@ -7,14 +7,14 @@ import Wrap from "../wrap"
 const Wrapper = nest(
   styled.div`
     color: ${theme.lightBackgroundTextColor};
-    padding-top: ${p => (p.main ? `${theme.headerHeight + 45}px` : "45px")};
-    padding-bottom: 45px;
+    padding-top: ${p => (p.main ? `${theme.headerHeight + 2.8125}rem` : "2.8125rem")};
+    padding-bottom: 2.8125rem;
     font-family: ${theme.titleFont};
     position: relative;
-    top: ${p => (p.main ? `-${theme.headerHeight}px` : "0")};
+    top: ${p => (p.main ? `-${theme.headerHeight}rem` : "0")};
     font-size: 1rem;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 80rem) {
       font-size: 1.25rem;
     }
 

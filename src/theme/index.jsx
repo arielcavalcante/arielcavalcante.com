@@ -1,8 +1,8 @@
 export default {
-  breakpoint: 610,
-  headerHeight: 63,
-  headerBreakpoint: 710,
-  blogMaxWidth: 650,
+  breakpoint: 38.125,
+  headerHeight: 4,
+  headerBreakpoint: 44.375,
+  blogMaxWidth: 40.625,
   baseColor: "#34A7B2",
   secondaryColor: "#F59AA3",
   lightBackgroundColor: "#F5E4C3",

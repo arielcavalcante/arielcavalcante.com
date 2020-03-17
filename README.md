@@ -1,2 +1,3 @@
-## 🚀  Styles are breaking
+## 🚀 Styles are breaking
+
 Something in the way 🤔

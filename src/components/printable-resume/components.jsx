@@ -44,7 +44,7 @@ export const TagList = styled.ul`
     line-height: 1;
     background-color: ${secondaryColor};
     padding: .25rem .5rem;
-    border-radius: 4px;
+    border-radius: .125rem;
     border-color: ${titleColor}
     border-width: .25rem;
     display: block;
@@ -72,7 +72,7 @@ export const HeaderSubtitle = styled.div`
   color: ${subtitleColor};
   font-weight: lighter;
   font-size: 1.25rem;
-  letter-spacing: 0.1px;
+  letter-spacing: .00625rem;
   padding-left: 0.125rem;
 `
 
@@ -99,13 +99,13 @@ export const HeaderContacts = styled.ul`
   svg {
     height: 0.8rem;
     position: relative;
-    top: 1px;
+    top: .0625rem;
     opacity: 0.7;
   }
 `
 
 export const Separator = styled.div`
-  border-top: 1px solid ${textColor};
+  border-top: .0625rem solid ${textColor};
   margin: 1.25rem 0;
 `
 
@@ -120,13 +120,13 @@ export const Content = styled.div`
   & > aside {
     flex-shrink: 1;
 
-    @media (min-width: ${theme.headerBreakpoint}px) {
+    @media (min-width: ${theme.headerBreakpoint}rem) {
       max-width: 13rem;
       margin-right: 2rem;
     }
   }
 
-  @media (max-width: ${theme.headerBreakpoint}px) {
+  @media (max-width: ${theme.headerBreakpoint}rem) {
     flex-direction: column;
 
     & > aside {
@@ -138,7 +138,7 @@ export const Content = styled.div`
 export const ContentSection = styled.div`
   margin-bottom: 2.25rem;
 
-  @media (max-width: ${theme.headerBreakpoint}px) {
+  @media (max-width: ${theme.headerBreakpoint}rem) {
     &:nth-of-type(4n) {
       margin: 5rem 0;
     }

@@ -34,7 +34,7 @@ const Wrapper = nest(
       }
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 43.75rem) {
       ul {
         display: flex;
         flex-direction: row;
@@ -42,7 +42,7 @@ const Wrapper = nest(
         padding: 1.25rem 0;
       }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 43.75rem) {
       height: 100%;
 
       ul {
@@ -78,10 +78,10 @@ const Popover = styled.div`
   left: calc(50% - 9.375rem);
   pointer-events: none;
 
-  @media (max-width: 700px) {
+  @media (max-width: 43.75rem) {
     bottom: 10.125rem;
   }
-  @media (min-width: 700px) {
+  @media (min-width: 43.75rem) {
     bottom: 2.125rem;
   }
 

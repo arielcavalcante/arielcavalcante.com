@@ -33,14 +33,14 @@ const Wrapper = nest(
     margin: auto;
     display: block;
 
-    @media (max-width: 700px) {
+    @media (max-width: 43.75rem) {
       margin-top: 2.5rem;
       margin-bottom: 8.5rem;
       justify-content: space-around;
       align-items: center;
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 43.75rem) {
       margin-top: 4rem;
       margin-bottom: 10rem;
     }
@@ -98,7 +98,7 @@ const authorLink = (
 
 const sourceLink = (
   <a
-    href="https://github.com/arielcavalcante/ericaprieto.com"
+    href="https://github.com/arielcavalcante/arielcavalcante.com"
     target="_blank"
     rel="noopener noreferrer"
   >

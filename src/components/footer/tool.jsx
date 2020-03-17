@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 const Logo = styled.img`
-  height: 21px;
-  margin-bottom: 9px;
+  height: 1.3125rem;
+  margin-bottom: .5625rem;
 `
 
 const Wrapper = styled.a.attrs({

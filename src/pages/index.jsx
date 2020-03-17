@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 import theme from "../theme"
 
 const Avatar = styled(BaseAvatar)`
-  @media (max-width: ${theme.breakpoint - 1}px) {
+  @media (max-width: ${theme.breakpoint - .0625}rem) {
     align-self: center;
   }
 `
@@ -18,14 +18,14 @@ const Intro = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: row-reverse;
-  @media (max-width: ${theme.breakpoint - 1}px) {
+  @media (max-width: ${theme.breakpoint - .0625}rem) {
     flex-direction: column;
   }
 `
 
 const IntroText = styled.div`
   padding-right: 1.25rem;
-  @media (max-width: ${theme.breakpoint - 1}px) {
+  @media (max-width: ${theme.breakpoint - .0625}rem) {
     margin-top: 1.25rem;
     padding-right: 0;
   }

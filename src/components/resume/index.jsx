@@ -6,21 +6,21 @@ import theme from "../../theme"
 import resume from "../../resume.json"
 
 const Wrapper = styled.div`
-  @media (min-width: ${theme.breakpoint}px) {
+  @media (min-width: ${theme.breakpoint}rem) {
     display: flex;
     width: 100%;
   }
 `
 
 const Sidebar = styled.div`
-  @media (min-width: ${theme.breakpoint}px) {
+  @media (min-width: ${theme.breakpoint}rem) {
     min-width: 17.5rem;
     max-width: 17.5rem;
   }
 `
 
 const Body = styled.div`
-  @media (min-width: ${theme.breakpoint}px) {
+  @media (min-width: ${theme.breakpoint}rem) {
     padding-left: 1.5rem;
     flex-grow: 1;
   }
@@ -28,7 +28,7 @@ const Body = styled.div`
 
 const JobSection = styled.div`
   &:not(:last-child) {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1rem solid #fff;
     padding-bottom: 1.875rem;
     margin-bottom: 1.875rem;
   }
@@ -56,7 +56,7 @@ const TechList = styled.div`
 // const FreelancingInfo = styled.div`
 //   margin-top: 15rem;
 //   font-size: 1rem;
-//     @media (max-width: ${theme.breakpoint}px) {
+//     @media (max-width: ${theme.breakpoint}rem) {
 //       margin-top: 3rem;
 //     }
 // `

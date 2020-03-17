@@ -11,8 +11,8 @@ const Avatar = nest(
     src: "/img/avatar.jpg",
     alt: "",
   })`
-    width: 160px;
-    height: 160px;
+    width: 10rem;
+    height: 10rem;
     box-sizing: unset;
     border-radius: 100%;
     border: solid 1rem ${theme.baseColor};
