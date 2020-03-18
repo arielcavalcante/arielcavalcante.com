@@ -10,16 +10,23 @@ const Wrapper = nest(
   text-align: center;
   color: ${theme.titleColor};
   background: #fceccc;
-  height: 100%;
-  display: flex;
-  justify-content: column;
+  display: block;
   position: relative;
-  padding: 3.75rem 0;
+  padding: 1.75rem;
   margin-bottom: 0;
 
     ul {
+      width: 85%;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: auto;
       
       li {
+        width: fit-content;
+        display: block;
         list-style: none;
         font-size: 1rem;
         
@@ -28,7 +35,11 @@ const Wrapper = nest(
         }
         
         a {
-          display: inline-block;
+          margin: 0;
+          width: fit-content;
+          display: flex;
+          justify-content: center;
+          align-item: center;
           font-width: 700;
           text-decoration: none;
           text-transform: lowercase;
@@ -37,46 +48,22 @@ const Wrapper = nest(
     
 
     @media (max-width: 43.75rem) {
-      height: 100%;
-      padding: 2rem 0;
-      display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
+      padding: 1rem 0;
 
-        li {
-          font-size: 1rem;
-
-          &:not(:first-child){
-            padding-top: 1rem;
-          }
-        }
-      }
-
-    @media (min-width: 43.75rem) {
-      display: block;
-      justify-content: center;
-      
-      padding: 1.25rem 0;
-      display: flex;
-      flex-direction: row;
-
-      li {
-        display: flex;
-        justify-content: space-evenly;
-
-        a {
-          diplay: block;
-        } 
+      li:not(:first-child) {
+        margin-top: 1.5rem;
       }
     }
-  }
   `,
   Wrap
 )
 
 const Popover = styled.div`
   background-color: ${theme.secondaryColor};
-  color: #fff;
+  color: ${theme.lighterBGColor};
   font-size: 1.15rem;
   font-family: "Poppins";
   font-weight: 700;
@@ -87,11 +74,9 @@ const Popover = styled.div`
   display: block;
   position: absolute;
   left: calc(50% - 9.375rem);
+  bottom: 13rem;
   pointer-events: none;
 
-  @media (max-width: 43.75rem) {
-    bottom: 10.125rem;
-  }
   @media (min-width: 43.75rem) {
     bottom: 2.125rem;
   }
@@ -99,7 +84,7 @@ const Popover = styled.div`
   &:before {
     content: "";
     display: block;
-    border-top: 0.75rem solid ${theme.baseColor};
+    border-top: 0.75rem solid ${theme.secondaryColor};
     border-right: 0.75rem solid transparent;
     border-left: 0.75rem solid transparent;
     margin-left: -0.75rem;

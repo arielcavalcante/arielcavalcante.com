@@ -9,7 +9,6 @@ import Body from "../body"
 
 const GlobalStyle = createGlobalStyle`
   html {
-    background-color: #fffbf2;
     box-sizing: border-box;
   }
 
@@ -22,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 `
 

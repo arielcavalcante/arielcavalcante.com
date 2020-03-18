@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from "styled-components"
 import theme from "../../theme"
 
 const titleFont = theme.titleFont
-const titleColor = theme.titleColor
-const subtitleColor = "#666"
+const titleColor = theme.lighterBGColor
+const subtitleColor = theme.lightBGColor
 const textColor = theme.textColor
 const secondaryColor = theme.secondaryColor
 
@@ -12,14 +12,14 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-family: "Museo Sans";
     color: ${theme.textColor};
-    background-color: ${theme.lightBGColor};
+    background-color: ${theme.lighterBGColor};
     width: 85%;
   }
   `
   
   export const Wrapper = styled.div`
-  width: 68.75rem;
-  margin: 3.625rem;
+    width: 68.75rem;
+    margin: 3.625rem;
   `
 
 export const TagList = styled.ul`
@@ -78,7 +78,6 @@ export const HeaderContacts = styled.ul`
   margin: 0;
   margin-left: auto;
   display: block;
-  
   font-weight: lighter;
   font-size: 1rem;
 

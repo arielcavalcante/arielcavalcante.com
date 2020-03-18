@@ -13,11 +13,13 @@ export default {
   textColor: "#5B2E35",
   highlightedTextColor: "#34A7B2",
 
+  lighterBGColor: "#fffbf2",
   lightBGColor: "#F5E4C3",
   lightBGTextColor: "#5B2E35",
   lightBGLinkHoverColor: "#34A7B2",
 
   darkBGColor: "#5B2E35",
   darkBGTextColor: "#F5E4C3",
+  darkerBGTextColor: "#fffbf2",
   darkBGLinkHoverColor: "#F59AA3"
 }
