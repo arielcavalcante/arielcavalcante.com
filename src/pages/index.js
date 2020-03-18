@@ -18,6 +18,7 @@ const Intro = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: row-reverse;
+
   @media (max-width: ${theme.breakpoint - .0625}rem) {
     flex-direction: column;
   }
@@ -25,12 +26,12 @@ const Intro = styled.div`
 
 const IntroText = styled.div`
   padding-right: 1.25rem;
+
   @media (max-width: ${theme.breakpoint - .0625}rem) {
     margin-top: 1.25rem;
     padding-right: 0;
   }
 `
-
 
 const IndexContent = () => (
   <>

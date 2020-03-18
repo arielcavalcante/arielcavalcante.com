@@ -9,66 +9,74 @@ const Wrapper = nest(
   font-family: ${theme.titleFont};
   text-align: center;
   color: ${theme.titleColor};
-  background: ${theme.secondaryColor};
+  background: #fceccc;
   height: 100%;
-  display: block;
+  display: flex;
+  justify-content: column;
   position: relative;
   padding: 3.75rem 0;
   margin-bottom: 0;
 
     ul {
-      margin: 0;
-      padding: 0;
-    }
       
-
       li {
         list-style: none;
         font-size: 1rem;
-
+        
         &:first-child {
-           margin-top: 0;
+          margin-top: 0;
         }
         
         a {
+          display: inline-block;
+          font-width: 700;
           text-decoration: none;
           text-transform: lowercase;
         }
       }
-    }
+    
+
     @media (max-width: 43.75rem) {
       height: 100%;
-
-      ul {
-        padding: 2rem 0;
+      padding: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
         li {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
           font-size: 1rem;
-  
+
           &:not(:first-child){
-            padding-top: 1rem; 
+            padding-top: 1rem;
+          }
         }
       }
-    }
 
     @media (min-width: 43.75rem) {
-      ul {
+      display: block;
+      justify-content: center;
+      
+      padding: 1.25rem 0;
+      display: flex;
+      flex-direction: row;
+
+      li {
         display: flex;
-        flex-direction: row;
-        width: 75%;
-        padding: 1.25rem 0;
+        justify-content: space-evenly;
+
+        a {
+          diplay: block;
+        } 
       }
     }
+  }
   `,
   Wrap
 )
 
 const Popover = styled.div`
-  background-color: ${theme.baseColor};
-  color: #f9f;
+  background-color: ${theme.secondaryColor};
+  color: #fff;
   font-size: 1.15rem;
   font-family: "Poppins";
   font-weight: 700;

@@ -8,7 +8,7 @@ import theme from "../../theme"
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/cv/", label: "Resume" }
+  { to: "/cv", label: "Resume" }
 ]
 
 const Wrapper = nest(
@@ -20,13 +20,13 @@ const Wrapper = nest(
     width: 100%;
     height: ${theme.headerHeight}rem;
     background-color: ${p =>
-      p.showShadow ? theme.darkBackgroundColor : "transparent"};
-    color: ${theme.darkBackgroundTextColor};
+      p.showShadow ? theme.darkBGColor : "transparent"};
+    color: ${theme.darkBGTextColor};
     user-select: none;
     font-family: ${theme.titleFont};
     box-shadow: ${p =>
       p.showShadow ? "0 0 .125rem 0 rgba(0,0,0,0.4)" : "unset"};
-    transition: box-shadow 300ms linear, background-color 300ms linear;
+    transition: box-shadow 300ms ease-in, background-color 300ms ease-out;
     border-top: 0.25rem solid ${theme.baseColor};
     display: flex;
     flex-grow: 0;
@@ -38,7 +38,7 @@ const Wrapper = nest(
       a {
         text-decoration: none;
         text-transform: lowercase;
-        transition: color 200ms linear;
+        transition: color 200ms ease-in-out;
 
         &.active {
           color: ${theme.baseColor};
@@ -68,8 +68,9 @@ const Wrapper = nest(
 )
 
 const Logo = styled.h1`
-  display: block;
-  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
   font-weight: normal;
   font-size: 1.125rem;
   line-height: 1;
@@ -84,9 +85,11 @@ const Logo = styled.h1`
 const Menu = styled.nav`
   left: 0.25rem;
   font-size: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
   ul {
-    width: 100%;
     list-style: none;
     padding: 0;
     margin: 1.5rem 0;
@@ -97,11 +100,10 @@ const Menu = styled.nav`
     li {
       display: block;
       align-items: baseline;
-    }
-
-    li:not(:nth-of-type(even)) {
-      margin-left: 2.5rem;
       padding: 0 0.75rem;
+
+    &:not(:first-child) {
+      margin-left: 1.5rem;
     }
   }
 

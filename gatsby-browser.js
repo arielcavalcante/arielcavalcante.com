@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import webfontloader from "webfontloader"
+import Layout from "./src/components/layout"
 
-// You can delete this file if you're not using it
+export const wrapPageElement = ({ element, props }) => (
+  <Layout {...props}>{element}</Layout>
+)
+
+export const onInitialClientRender = () => {
+  webfontloader.load({
+    active: () => {
+      document.querySelector("#root").style.opacity = 1
+    },
+    google: {
+      families: ["Poppins", "Noto Serif"]
+    }
+  })
+}

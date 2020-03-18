@@ -5,9 +5,9 @@ const branch = (prop, left, right) => props => (props[prop] ? left : right)
 
 const Tag = styled.div`
   display: inline-block;
-  padding: ${branch("small", ".25rem .425rem", ".375rem .8125rem")};
+  padding: ${branch("small", ".25rem .4375rem", ".375rem .8125rem")};
   font-size: .75rem;
-  color: ${branch("inverse", "#fff", theme.baseColor)};
+  color: ${branch("inverse", theme.lightBGColor, theme.baseColor)};
   background: ${branch("inverse", theme.baseColor, "transparent")};
   border: .0625rem solid ${theme.baseColor};
   border-radius: .25rem;

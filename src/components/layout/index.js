@@ -9,6 +9,7 @@ import Body from "../body"
 
 const GlobalStyle = createGlobalStyle`
   html {
+    background-color: #fffbf2;
     box-sizing: border-box;
   }
 

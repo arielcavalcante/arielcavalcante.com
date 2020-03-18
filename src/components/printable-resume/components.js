@@ -13,14 +13,14 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Museo Sans";
     color: ${theme.textColor};
     background-color: ${theme.lightBGColor};
-    width: 100%;
+    width: 85%;
   }
-`
-
-export const Wrapper = styled.div`
+  `
+  
+  export const Wrapper = styled.div`
   width: 68.75rem;
-  margin: 0.625rem auto;
-`
+  margin: 3.625rem;
+  `
 
 export const TagList = styled.ul`
   list-style: none;
@@ -32,8 +32,6 @@ export const TagList = styled.ul`
   justify-content: space-evenly;
   align-items: baseline;
   align-content: stretch;
-
-  
 
   li {
     color: ${textColor};
@@ -62,7 +60,7 @@ export const Header = styled.header`
 export const HeaderTitle = styled.div`
   color: ${titleColor};
   font-family: ${titleFont};
-  font-size: 2rem;
+  font-size: 2.75rem;
   font-weight: bolder;
   text-transform: uppercase;
 `
@@ -80,7 +78,7 @@ export const HeaderContacts = styled.ul`
   margin: 0;
   margin-left: auto;
   display: block;
-  white-space: nowrap;
+  
   font-weight: lighter;
   font-size: 1rem;
 
@@ -164,7 +162,7 @@ export const Job = styled.div`
 
 export const JobDetails = styled.div`
   color: ${subtitleColor};
-  font-weight: lighter;
+  font-weight: bolder;
   font-weight: 0.875rem;
 `
 
