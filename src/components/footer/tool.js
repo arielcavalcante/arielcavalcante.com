@@ -17,7 +17,12 @@ const Wrapper = styled.a.attrs({
   text-transform: uppercase;
   font-size: 0.8em;
   text-decoration: none;
-  transition: color 200ms linear;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
+  }
 `
 
 const Tool = ({ name, logo: logoSrc, link }) => (

@@ -23,6 +23,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: subpixel-antialiased;
   }
+  
+  ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+  }
 `
 
 const Wrapper = styled.div`

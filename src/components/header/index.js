@@ -30,94 +30,62 @@ const Wrapper = nest(
     border-top: 0.25rem solid ${theme.baseColor};
     display: flex;
     flex-grow: 0;
-    flex-wrap: wrap;
     justify-content: space-between;
-
     li {
       display: block;
       a {
         text-decoration: none;
         text-transform: lowercase;
         transition: color 200ms ease-in-out;
-
+        
         &.active {
           color: ${theme.baseColor};
         }
       }
+
   `,
   styled(Wrap)`
+    margin: .5rem auto;
     height: 100%;
-
-    @media (min-width: ${theme.headerBreakpoint}rem) {
-      display: flex;
-      align-items: baseline;
-
-      nav {
-        padding-left: 7%;
-      }
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    @media (max-width: ${theme.breakpoint + 2}rem) {
+      justify-content: space-around;
+      flex-direction: column;
+      margin: .25rem auto .0625rem;
 
       h1 {
-        padding-right: 7%;
+        margin: 0;
+        font-size: 1rem;
       }
-    }
-
-    @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
-      padding: 0.75rem 0;
     }
   `
 )
 
 const Logo = styled.h1`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  width: 21rem;
   font-weight: normal;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1;
-  margin: 0;
-
-  @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
 `
 
 const Menu = styled.nav`
+  width: 13rem;
+  max-width: 15rem;
   left: 0.25rem;
   font-size: 1rem;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: baseline;
 
   ul {
+    width: 100%;
     list-style: none;
-    padding: 0;
-    margin: 1.5rem 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    li {
-      display: block;
-      align-items: baseline;
-      padding: 0 0.75rem;
-
-    &:not(:first-child) {
-      margin-left: 1.5rem;
-    }
-  }
-
-  @media (min-width: ${theme.headerBreakpoint}rem) {
-    & ul,
-    li {
-      height: 100%;
-    }
-  }
-
-  @media (max-width: ${theme.headerBreakpoint - .0625}rem) {
-    li {
-      margin-right: .625rem;
-    }
+    justify-content: space-between;
+    align-items: baseline;
   }
 `
 
