@@ -12,11 +12,12 @@ const Wrapper = nest(
   background: #fceccc;
   display: block;
   position: relative;
-  padding: 1.75rem;
+  padding: 2rem;
   margin-bottom: 0;
 
     ul {
       width: 85%;
+      max-width: 30rem;
       padding: 0;
       display: flex;
       flex-direction: row;
@@ -70,7 +71,7 @@ const Popover = styled.div`
   width: 18.75rem;
   border-radius: 0.375rem;
   padding: 1.15rem 0.6rem;
-  box-shadow: 0 0 1rem rgba(10, 10, 0, 0.25);
+  box-shadow: 0 0 1rem rgb(10 10 0 / .25);
   display: block;
   position: absolute;
   left: calc(50% - 9.375rem);
@@ -78,7 +79,7 @@ const Popover = styled.div`
   pointer-events: none;
 
   @media (min-width: 43.75rem) {
-    bottom: 2.125rem;
+    bottom: 3.5rem;
   }
 
   &:before {

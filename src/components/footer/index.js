@@ -32,19 +32,9 @@ const Wrapper = nest(
     max-width: 85%;
     height: 100%;
     margin: auto;
+    margin-top: .5rem;
+    margin-bottom: 8rem;
     display: block;
-
-    @media (max-width: 43.75rem) {
-      margin-top: 2.5rem;
-      margin-bottom: 8.5rem;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    @media (min-width: 43.75rem) {
-      margin-top: 4rem;
-      margin-bottom: 10rem;
-    }
 
     a {
       font-weight: 500;

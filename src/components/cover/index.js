@@ -6,13 +6,14 @@ import Wrap from "../wrap"
 
 const Wrapper = nest(
   styled.div`
-    color: ${theme.lightBackgroundTextColor};
+    color: ${theme.lighterBGTextColor};
     padding-top: ${p => (p.main ? `${theme.headerHeight + 2.8125}rem` : "2.8125rem")};
     padding-bottom: 2.8125rem;
     font-family: ${theme.titleFont};
     position: relative;
     top: ${p => (p.main ? `-${theme.headerHeight}rem` : "0")};
     font-size: 1rem;
+    background-color: ${theme.lighterBGColor};
 
     @media (min-width: 80rem) {
       font-size: 1.25rem;
@@ -23,14 +24,13 @@ const Wrapper = nest(
       `
       background-image: url(${p.backgroundImage});
       background-size: cover;
-      background-position: right top;
+      background-position: right center;
       min-height: 40vw;
-      max-height: 60vh;
       display: flex;
       flex-direction: column;
 
       * {
-        color: #d6d6d6 !important;
+        color: ${theme.lighterBGColor} !important;
       }
     `};
   `,

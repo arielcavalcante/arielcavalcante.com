@@ -46,15 +46,16 @@ const Wrapper = nest(
   `,
   styled(Wrap)`
     margin: .5rem auto;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     
-    @media (max-width: ${theme.breakpoint + 2}rem) {
-      justify-content: space-around;
+    @media (max-width: ${theme.headerBreakpoint}rem) {
+      
+      height: 80%;
+      justify-content: space-evenly;
       flex-direction: column;
-      margin: .25rem auto .0625rem;
+      font-weight: 300;
 
       h1 {
         margin: 0;
