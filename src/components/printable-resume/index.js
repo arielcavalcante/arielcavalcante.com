@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "gatsby-link"
 import resume from "../../resume.json"
 import GlobeIcon from "./globe-icon"
 import AtIcon from "./at-icon"
@@ -36,6 +37,20 @@ const renderInternationalExperience = (experience, index) => (
   </Job>
 )
 
+const renderEducationalInformation = (experience, index) => (
+  <Job key={index}>
+    <div>
+      <CompanyName>
+        {`${experience.university} - ${experience.longName}`}
+      </CompanyName>
+      <JobDetails>{experience.period}</JobDetails>
+    </div>
+    <JobDescription>
+      <p>{experience.course}</p>
+    </JobDescription>
+  </Job>
+)
+
 const renderHistory = (job, index) => (
   <Job key={index}>
     <div>
@@ -53,21 +68,27 @@ const PrintableResume = () => {
   return (
     <Wrapper>
       <GlobalStyle />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&family=Roboto:wght@500;700;900"
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&family=Roboto:wght@500;700"
         rel="stylesheet"
         type="text/css"
       />
       <Header>
         <div>
           <HeaderTitle>Ariel Cavalcante</HeaderTitle>
-          <HeaderSubtitle>Designer Web</HeaderSubtitle>
+          <HeaderSubtitle>Product Designer</HeaderSubtitle>
         </div>
         <HeaderContacts>
           <li>
-            <GlobeIcon /> https://arielcavalcante.com
+            <GlobeIcon />
+            <Link to="/">
+              arielcavalcante.io
+            </Link>
           </li>
           <li>
-            <AtIcon /> ariel.usabilidade@gmail.com
+            <AtIcon /> 
+            <a href="mailto:ariel.usabilidade@gmail.com">
+              ariel.usabilidade@gmail.com
+            </a>
           </li>
         </HeaderContacts>
       </Header>
@@ -79,10 +100,14 @@ const PrintableResume = () => {
             <ul>
               <li>26 years old</li>
               <li>Single</li>
-              <li>Fortaleza / CE - Brazil</li>
+              <li>Brazil</li>
               <li>Native Portuguese</li>
               <li>Fluent English</li>
             </ul>
+          </ContentSection>
+        <ContentSection>
+            <ContentTitle>Education</ContentTitle>
+            {resume.educationalInformation.map(renderEducationalInformation)}
           </ContentSection>
           <ContentSection>
             <ContentTitle>I already work with</ContentTitle>
@@ -93,11 +118,16 @@ const PrintableResume = () => {
             <TagList>{resume.techs.wouldWorkWith.map(renderTech)}</TagList>
           </ContentSection>
           <ContentSection>
-            <ContentTitle>International Experience</ContentTitle>
-            {resume.internationalExperience.map(renderInternationalExperience)}
+            <ContentTitle>I can't work without</ContentTitle>
+            <TagList>{resume.techs.wouldntWorkWithout.map(renderTech)}
+            </TagList>
           </ContentSection>
         </aside>
         <main>
+        <ContentSection>
+            <ContentTitle>International Experience</ContentTitle>
+            {resume.internationalExperience.map(renderInternationalExperience)}
+          </ContentSection>
           <ContentSection>
             <ContentTitle>Professional Experience</ContentTitle>
             {resume.history.map(renderHistory)}

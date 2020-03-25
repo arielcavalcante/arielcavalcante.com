@@ -13,7 +13,7 @@ const Wrapper = nest(
     position: relative;
     top: ${p => (p.main ? `-${theme.headerHeight}rem` : "0")};
     font-size: 1rem;
-    background-color: ${theme.lighterBGColor};
+    background-color: ${theme.lightishBGColor};
 
     @media (min-width: 80rem) {
       font-size: 1.25rem;

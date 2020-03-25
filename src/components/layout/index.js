@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   color: ${theme.textColor};
   font-family: ${theme.textFont};
-  background-color: ${theme.lightBackgroundColor};
+  background-color: ${theme.lighterBGColor};
   opacity: 0;
   transition: opacity 300ms linear;
   border-bottom: 0.5rem solid ${theme.baseColor};

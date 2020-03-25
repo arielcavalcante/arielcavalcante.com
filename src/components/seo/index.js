@@ -42,8 +42,8 @@ const SEO = ({
             {
               property: "og:image",
               content: largeShareCard
-                ? "https://arielcavalcante.com/img/share.jpg?n=1"
-                : "https://arielcavalcante.com/img/avatar.jpg?n=1"
+                ? "arielcavalcante.io/img/share.jpg?n=1"
+                : "arielcavalcante.io/img/avatar.jpg?n=1"
             },
             {
               name: `twitter:card`,

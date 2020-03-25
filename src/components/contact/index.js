@@ -9,7 +9,7 @@ const Wrapper = nest(
   font-family: ${theme.titleFont};
   text-align: center;
   color: ${theme.titleColor};
-  background: #fceccc;
+  background: ${theme.lightishBGColor};
   display: block;
   position: relative;
   padding: 2rem;
@@ -129,9 +129,9 @@ const Contact = ({ showPopover }) => (
         <ExternalLink href="https://twitter.com/aqueleariel" label="twitter" />
       </li>
       {/*<li>
-        <a href="#" onClick={preventDefault}>
+        <Link href="#" onClick={preventDefault}>
           +55 85 99918-8678
-        </a>
+        </Link>
       </li>*/}
       <li>
         <a href="mailto:ariel.usabilidade@gmail.com">

@@ -8,7 +8,7 @@ import theme from "../../theme"
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/cv/", label: "Resume" }
+  { to: "/cv", label: "Resume" }
 ]
 
 const Wrapper = nest(

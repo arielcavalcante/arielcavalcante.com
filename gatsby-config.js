@@ -4,14 +4,14 @@ module.exports = {
     author: "Ariel Cavalcante",
     description:
       "Overwatch Tanker and Healer. Dog and cat person. Beyhive and Little Monster. Perfectly balanced. As all things should be.",
-    siteUrl: "https://arielcavalcante.com",
+    siteUrl: "arielcavalcante.io",
   },
   plugins: [
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "ariel cavalcante | product designer",
-        short_name: "arielcavalcante.com",
+        short_name: "arielcavalcante.io",
         start_url: "/",
         background_color: "#F5E4C3",
         theme_color: "#34A7B2",

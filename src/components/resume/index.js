@@ -51,6 +51,11 @@ const JobDetails = styled.h4`
 const TechList = styled.div`
   margin-top: 1rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
 `
 
 // const FreelancingInfo = styled.div`
@@ -130,14 +135,14 @@ const Resume = () => (
             <TechList>{resume.techs.workWith.map(renderTech)}</TechList>
           </TechSection>
           <TechSection>
-            <SectionTitle>I would work with</SectionTitle>
+            <SectionTitle>I would also work with</SectionTitle>
             <TechList>{resume.techs.wouldWorkWith.map(renderTech)}</TechList>
           </TechSection>
-          {/* <TechSection>
-            <SectionTitle>I don't want to work with</SectionTitle>
-            <TechList>{resume.techs.wouldntWorkWith.map(renderTech)}</TechList>
+          <TechSection>
+            <SectionTitle>I can't work without</SectionTitle>
+            <TechList>{resume.techs.wouldntWorkWithout.map(renderTech)}</TechList>
           </TechSection>
-          {desktop && renderFreelanceInfo()} */}
+          {/* {desktop && renderFreelanceInfo()} */}
         </Sidebar>
         {!desktop && <MobileHeader>Job History</MobileHeader>}
         <Body>{resume.history.map(renderJob)}</Body>

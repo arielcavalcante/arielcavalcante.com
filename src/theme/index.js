@@ -14,6 +14,7 @@ export default {
   highlightedTextColor: "#34A7B2",
 
   lighterBGColor: "#fffbf2",
+  lightishBGColor: "#fceccc",
   lightBGColor: "#F5E4C3",
   lightBGTextColor: "#5B2E35",
   lightBGLinkHoverColor: "#34A7B2",

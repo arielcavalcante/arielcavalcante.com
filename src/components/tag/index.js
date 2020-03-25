@@ -6,14 +6,16 @@ const branch = (prop, left, right) => props => (props[prop] ? left : right)
 const Tag = styled.div`
   display: inline-block;
   padding: ${branch("small", ".25rem .4375rem", ".375rem .8125rem")};
-  font-size: .75rem;
+  font-size: .8125rem;
   color: ${branch("inverse", theme.lightBGColor, theme.baseColor)};
   background: ${branch("inverse", theme.baseColor, "transparent")};
   border: .0625rem solid ${theme.baseColor};
   border-radius: .25rem;
   font-family: ${theme.titleFont};
-  margin: 0 .375rem .5rem 0;
+  margin: .325rem;
+  flex-grow: 1;
   font-weight: ${branch("inverse", "bold", "normal")};
+  text-align: center;
 `
 
 export default Tag

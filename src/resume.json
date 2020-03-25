@@ -6,17 +6,37 @@
       "CSS",
       "React.js",
       "Gatbsy.js",
-      "Heroku",
-      "TestCafe"
+      "Microinteractions",
+      "User Tests",
+      "A/B Tests",
+      "Design Thinking"
     ],
-    "wouldWorkWith": ["Next.js", "Apollo", "GraphQL", "Jenkins", "Docker"]
+    "wouldWorkWith": [
+      "IoT",
+      "Cognitive Computation",
+      "Edutechs",
+      "Socialtechs"
+    ],
+    "wouldntWorkWithout": [
+      "A diverse team",
+      "Social values",
+      "Wage and salary plan"
+    ]
   },
+  "educationalInformation": [
+    {
+      "university": "UNIFOR",
+      "longName": "University of Fortaleza",
+      "period": "jan/2020 to aug/2022",
+      "course": "System Development and Analysis"
+    }
+  ],
   "internationalExperience": [
     {
       "company": "Petco",
       "country": "USA",
       "period": "from sep/2019 to dec/2019",
-      "description": "While working for Oowlish, I helped with the creation of the 2.0 version of Vetpoint, a web-based-application. I contributed building react themes/layouts/components and doing design auditions, prototyping animations and microinteractions."
+      "description": "While working for Oowlish, I helped with the creation of the 2.0 version of Vetpoint, a web-based-application. I contributed building react themes, layouts and components, doing design auditions, prototyping animations and microinteractions."
     }
   ],
   "history": [
@@ -25,21 +45,21 @@
       "position": "Front-End Designer",
       "period": "aug/2019 dec/2019",
       "description": "At Oowlish I worked offshore with a team based in the United States to build the best possible interaction for our customers and partners.",
-      "techs": ["JavaScript", "React.js", "CSS"]
+      "techs": ["React.js", "Sketch", "Maze"]
     },
     {
       "company": "Fortes Tecnologia",
       "position": "UX Designer",
       "period": "jan/2018 to jun/2018",
       "description": "Working in Fortes I built high fidelity prototypes which I used in user tests, gathered data and wrote documentation for auditions of the current system UI.",
-      "techs": ["Adobe XD", "Sketch", "Zeplin"]
+      "techs": ["Adobe XD", "Miro", "Zeplin"]
     },
     {
       "company": "UNIFOR - University of Fortaleza",
       "position": "Product Designer",
       "period": "jan/2016 to aug/2016",
       "description": "Researched, 3D designed, prototyped, and tested several iterations of a mobile charging totem, currently in use at the university",
-      "techs": ["Maya", "Rhinoceros", "Grasshopper"]
+      "techs": ["User Research", "Design Thinking", "User Interviews"]
     }
   ]
 }

@@ -6,6 +6,8 @@ const titleColor = theme.lightBGTextColor
 const subtitleColor = theme.lightBGTextColor
 const textColor = theme.textColor
 const secondaryColor = theme.lightBGColor
+const titleBreakpoint = "55rem";
+
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -27,7 +29,6 @@ export const GlobalStyle = createGlobalStyle`
 export const TagList = styled.ul`
   list-style: none;
   padding: 0 !important;
-  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -55,7 +56,12 @@ export const TagList = styled.ul`
 
 export const Header = styled.header`
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  white-space: nowrap;
+
+  @media (max-width: ${titleBreakpoint} ) {
+    flex-direction: column;
+  }
 `
 
 export const HeaderTitle = styled.div`
@@ -75,21 +81,40 @@ export const HeaderSubtitle = styled.div`
 `
 
 export const HeaderContacts = styled.ul`
+  display: flex;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   margin-left: auto;
-  display: block;
   font-weight: 300;
   font-size: 1rem;
-
+  margin-top: .75rem;
+  
+  
+  @media (max-width: ${titleBreakpoint}) {
+    flex-direction: row;
+    margin-left: unset;
+    margin-top: 2rem;
+  }
+  
   li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.25rem;
-
+    display: inline-block;
+    padding: .125rem .25rem;
+    margin-bottom: .25rem;
+    text-align: right;
+    
+    & > svg {
+      margin-right: .5rem;
+    }
+    
     & + li > svg {
-      margin-right: 0.5rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      font-family: 'Roboto Slab';
+      font-width: 900;
+      text-decoration: none;
     }
   }
 
@@ -103,19 +128,25 @@ export const HeaderContacts = styled.ul`
 
 export const Separator = styled.div`
   border-top: .0625rem solid ${textColor};
-  margin: 1.25rem 0;
+  margin: 3rem 0 5rem;
 `
 
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
 
+  main {
+    & > div:first-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+
   & > main li:first-child {
     margin-left: 0;
   }
 
   & > aside {
-    flex-shrink: 1;
+    flex-shrink: 0;
 
     @media (min-width: ${theme.headerBreakpoint}rem) {
       max-width: 13rem;
@@ -135,9 +166,33 @@ export const Content = styled.div`
 export const ContentSection = styled.div`
   margin-bottom: 2.25rem;
 
+  &:first-of-type ul {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (max-width: ${theme.headerBreakpoint}rem) {
-    &:nth-of-type(4n) {
-      margin: 5rem 0;
+    &:first-of-type ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        width: fit-content;
+        margin: 0 2rem;
+        display: block;
+        white-space: nowrap;
+        font-size: 1.125rem;
+        margin: .5rem;
+      }
+    }
+
+    &:nth-of-type(4) {
+      margin: 0 0 5rem 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 !important;
     }
   }
 
