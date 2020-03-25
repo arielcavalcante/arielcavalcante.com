@@ -2,15 +2,15 @@ import styled, { createGlobalStyle } from "styled-components"
 import theme from "../../theme"
 
 const titleFont = theme.titleFont
-const titleColor = theme.lighterBGColor
-const subtitleColor = theme.lightBGColor
+const titleColor = theme.lightBGTextColor
+const subtitleColor = theme.lightBGTextColor
 const textColor = theme.textColor
-const secondaryColor = theme.secondaryColor
+const secondaryColor = theme.lightBGColor
 
 export const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1rem;
-    font-family: "Museo Sans";
+    font-family: "Roboto Slab";
     color: ${theme.textColor};
     background-color: ${theme.lighterBGColor};
     width: 85%;
@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
   
   export const Wrapper = styled.div`
     width: 68.75rem;
+    max-width: 100%;
+    max-height: 100%;
     margin: 3.625rem;
   `
 
@@ -27,13 +29,14 @@ export const TagList = styled.ul`
   padding: 0 !important;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: baseline;
-  align-content: stretch;
 
   li {
+    flex-grow: 1;
+    margin: .325rem;
     color: ${textColor};
     font-weight: 500;
     font-size: .875rem;
@@ -46,9 +49,7 @@ export const TagList = styled.ul`
     border-color: ${titleColor}
     border-width: .25rem;
     display: block;
-    flex-grow: 1;
     -webkit-print-color-adjust: exact;
-     margin: .325rem;
   }
 `
 
@@ -61,13 +62,13 @@ export const HeaderTitle = styled.div`
   color: ${titleColor};
   font-family: ${titleFont};
   font-size: 2.75rem;
-  font-weight: bolder;
+  font-weight: 700;
   text-transform: uppercase;
 `
 
 export const HeaderSubtitle = styled.div`
   color: ${subtitleColor};
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 1.25rem;
   letter-spacing: .00625rem;
   padding-left: 0.125rem;
@@ -78,7 +79,7 @@ export const HeaderContacts = styled.ul`
   margin: 0;
   margin-left: auto;
   display: block;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 1rem;
 
   li {
@@ -149,7 +150,7 @@ export const ContentSection = styled.div`
 export const ContentTitle = styled.div`
   color: ${titleColor};
   text-transform: uppercase;
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 1.125rem;
   margin-bottom: 1rem;
 `
@@ -161,17 +162,18 @@ export const Job = styled.div`
 
 export const JobDetails = styled.div`
   color: ${subtitleColor};
-  font-weight: bolder;
-  font-weight: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 700;
 `
 
 export const CompanyName = styled.div`
   font-size: 1rem;
-  font-weight: bolder;
+  font-weight: 900;
 `
 
 export const JobDescription = styled.div`
   padding-top: 0.625rem;
+  font-weight: 500;
 
   p {
     margin: 0 0 0.625rem 0;

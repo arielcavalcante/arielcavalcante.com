@@ -6,8 +6,8 @@ export default {
   baseColor: "#34A7B2",
   secondaryColor: "#F59AA3",
 
-  titleFont: "Museo Sans",
-  textFont: "Museo Slab",
+  titleFont: "Roboto Slab, serif",
+  textFont: "Roboto, sans-serif",
 
   titleColor: "#34A7B2",
   textColor: "#5B2E35",

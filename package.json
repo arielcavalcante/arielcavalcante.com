@@ -2,12 +2,13 @@
   "name": "arielcavalcante.com",
   "private": false,
   "homepage": "https://www.arielcavalcante.com/",
-  "description": "Ariel Cavalcante profesional website, containing a bit about myself, my experiences, resume and portfolio",
+  "description": "Ariel Cavalcante professional website. Here I tell you a bit about myself, my experiences, resume and portfolio",
   "version": "0.0.1",
   "author": "Ariel Cavalcante | Product Designer",
   "scripts": {
     "start": "gatsby build && node generate-pdf.js && gatsby serve",
     "build": "gatsby build && serve",
+    "develop": "gatsby develop",
     "lock": "rm -rf node-modules && rm -f package-lock.json && npm install",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\""
   },
@@ -45,6 +46,7 @@
     "recompose": "^0.30.0",
     "rehype-react": "^5.0.0",
     "serve-handler": "^6.1.2",
+    "sharp": "^0.25.2",
     "smoothscroll": "^0.4.0",
     "styled-components": "^5.0.1",
     "webfontloader": "^1.6.28"

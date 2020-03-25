@@ -12,7 +12,7 @@ export const onInitialClientRender = () => {
       document.querySelector("#root").style.opacity = 1
     },
     google: {
-      families: ["Museo Sans", "Museo Slab"]
+      families: ["Roboto", "Roboto Slab"]
     }
   })
 }

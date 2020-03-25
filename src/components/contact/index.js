@@ -66,7 +66,7 @@ const Popover = styled.div`
   background-color: ${theme.secondaryColor};
   color: ${theme.lighterBGColor};
   font-size: 1.15rem;
-  font-family: "Poppins";
+  font-family: ${theme.titleFont};
   font-weight: 700;
   width: 18.75rem;
   border-radius: 0.375rem;
