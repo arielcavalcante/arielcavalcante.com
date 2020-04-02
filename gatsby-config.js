@@ -4,7 +4,7 @@ module.exports = {
     author: "Ariel Cavalcante",
     description:
       "Overwatch Tanker and Healer. Dog and cat person. Beyhive and Little Monster. Perfectly balanced. As all things should be.",
-    siteUrl: "arielcavalcante.io",
+    siteUrl: "http://arielcavalcante.io",
   },
   plugins: [
     {
