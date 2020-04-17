@@ -2,10 +2,10 @@ import styled, { createGlobalStyle } from "styled-components"
 import theme from "../../theme"
 
 const titleFont = theme.titleFont
-const titleColor = theme.lightBGTextColor
-const subtitleColor = theme.lightBGTextColor
+const baseColor = theme.darkColor
+const subtitleColor = theme.darkColor
 const textColor = theme.textColor
-const secondaryColor = theme.lightBGColor
+const secondaryColor = theme.lightColor
 const titleBreakpoint = "55rem";
 
 
@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-family: "Roboto Slab";
     color: ${theme.textColor};
-    background-color: ${theme.lighterBGColor};
+    background-color: ${theme.lighterColor};
     width: 85%;
   }
   `
@@ -47,7 +47,7 @@ export const TagList = styled.ul`
     background-color: ${secondaryColor};
     padding: .25rem .5rem;
     border-radius: .125rem;
-    border-color: ${titleColor}
+    border-color: ${baseColor}
     border-width: .25rem;
     display: block;
     -webkit-print-color-adjust: exact;
@@ -65,7 +65,7 @@ export const Header = styled.header`
 `
 
 export const HeaderTitle = styled.div`
-  color: ${titleColor};
+  color: ${baseColor};
   font-family: ${titleFont};
   font-size: 2.75rem;
   font-weight: 700;
@@ -203,7 +203,7 @@ export const ContentSection = styled.div`
 `
 
 export const ContentTitle = styled.div`
-  color: ${titleColor};
+  color: ${baseColor};
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.125rem;

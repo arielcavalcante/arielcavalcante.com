@@ -20,8 +20,9 @@ const Wrapper = nest(
     width: 100%;
     height: ${theme.headerHeight}rem;
     background-color: ${p =>
-      p.showShadow ? theme.darkBGColor : "transparent"};
-    color: ${theme.darkBGTextColor};
+      p.showShadow ? theme.darkColor : "transparent"};
+    color: ${p =>
+      p.showShadow ? theme.lightColor : theme.baseColor};
     user-select: none;
     font-family: ${theme.titleFont};
     box-shadow: ${p =>

@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding: 0;
-    margin: auto;
+    margin: 0;
     -webkit-font-smoothing: subpixel-antialiased;
     opacity: 0;
   }
@@ -35,14 +35,22 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Wrapper = styled.div`
+  font-family: ${theme.textFont};
+  color: ${theme.textColor};
+  min-height: 100vh;
+  background-color: ${theme.lighterColor};
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  color: ${theme.textColor};
-  font-family: ${theme.textFont};
-  background-color: ${theme.lighterBGColor};
-  transition: opacity 300ms linear;
   border-bottom: 0.5rem solid ${theme.baseColor};
+  transition: opacity 300ms linear;
+
+  main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   a {
     color: inherit;
     

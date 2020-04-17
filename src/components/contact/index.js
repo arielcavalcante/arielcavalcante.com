@@ -8,8 +8,8 @@ const Wrapper = nest(
   styled.footer`
   font-family: ${theme.titleFont};
   text-align: center;
-  color: ${theme.titleColor};
-  background: ${theme.lightishBGColor};
+  color: ${theme.baseColor};
+  background: ${theme.lightColor};
   display: block;
   position: relative;
   padding: 2rem;
@@ -64,7 +64,7 @@ const Wrapper = nest(
 
 const Popover = styled.div`
   background-color: ${theme.secondaryColor};
-  color: ${theme.lighterBGColor};
+  color: ${theme.lighterColor};
   font-size: 1.15rem;
   font-family: ${theme.titleFont};
   font-weight: 700;
@@ -94,7 +94,7 @@ const Popover = styled.div`
     bottom: -0.75rem;
   }
 
-  transition: all 500ms cubic-bezier(0.1, 0.7, 0.3, 1);
+  transition: all .5s cubic-bezier(0.1, 0.7, 0.3, 1);
   transform: translateY(${p => (p.showPopover ? "-2.5rem" : "-1.5rem")});
   opacity: ${p => (p.showPopover ? "1" : "0")};
 `

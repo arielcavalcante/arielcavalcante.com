@@ -3,24 +3,18 @@ export default {
   headerHeight: 4,
   headerBreakpoint: 44.375,
   blogMaxWidth: 40.625,
+
   baseColor: "#34A7B2",
   secondaryColor: "#F59AA3",
 
   titleFont: "Roboto Slab, serif",
   textFont: "Roboto, sans-serif",
 
-  titleColor: "#34A7B2",
-  textColor: "#5B2E35",
-  highlightedTextColor: "#34A7B2",
-
-  lighterBGColor: "#fffbf2",
-  lightishBGColor: "#fceccc",
-  lightBGColor: "#F5E4C3",
-  lightBGTextColor: "#5B2E35",
-  lightBGLinkHoverColor: "#34A7B2",
-
-  darkBGColor: "#5B2E35",
-  darkBGTextColor: "#F5E4C3",
-  darkerBGTextColor: "#fffbf2",
-  darkBGLinkHoverColor: "#F59AA3"
+  lighterColor: "#FFFBF2",
+  lightColor: "#FCECCC",
+  darkColor: "#5B2E35",
+  
+  get textColor() {return this.darkColor},
+  get linkColor() {return this.baseColor},
+  get linkHoverColor() {return this.secondaryColor},
 }
