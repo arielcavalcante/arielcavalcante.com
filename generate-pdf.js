@@ -15,7 +15,7 @@ async function generatePDF() {
 
   await page.pdf({
     path: "./public/cv.pdf",
-    printBackground: true,
+    printBackground: false,
     width: "1105px",
     height: "1650px",
     pageRanges: "1-1"

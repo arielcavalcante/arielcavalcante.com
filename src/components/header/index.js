@@ -40,7 +40,7 @@ const Wrapper = nest(
         transition: color 200ms ease-in-out;
         
         &.active {
-          color: ${theme.baseColor};
+          color: ${theme.secondaryColor};
         }
       }
 

@@ -6,7 +6,7 @@ const baseColor = theme.darkColor
 const subtitleColor = theme.darkColor
 const textColor = theme.textColor
 const secondaryColor = theme.lightColor
-const titleBreakpoint = "55rem";
+const titleBreakpoint = "55";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -15,17 +15,22 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Roboto Slab";
     color: ${theme.textColor};
     background-color: ${theme.lighterColor};
-    width: 85%;
   }
   `
   
   export const Wrapper = styled.div`
-    width: 68.75rem;
-    max-width: 100%;
-    max-height: 100%;
     margin: 3.625rem;
-  `
+    width: 85%;
+    height: 100%;
 
+    @media print {
+      margin: auto;
+      transform: scale(1);
+      width: 1105px,
+      height: 1650px,
+    }
+    `
+    
 export const TagList = styled.ul`
   list-style: none;
   padding: 0 !important;
@@ -46,20 +51,23 @@ export const TagList = styled.ul`
     line-height: 1;
     background-color: ${secondaryColor};
     padding: .25rem .5rem;
-    border-radius: .125rem;
-    border-color: ${baseColor}
-    border-width: .25rem;
+    border-radius: .25rem;
     display: block;
-    -webkit-print-color-adjust: exact;
+    
+    @media print {
+      -webkit-print-color-adjust: exact;
+      border: solid .0625rem ${secondaryColor};
+    }
   }
 `
 
 export const Header = styled.header`
   display: flex;
+  flex-direction: row;
   align-items: baseline;
   white-space: nowrap;
 
-  @media (max-width: ${titleBreakpoint} ) {
+  @media (max-width: ${titleBreakpoint}rem) {
     flex-direction: column;
   }
 `
@@ -81,20 +89,18 @@ export const HeaderSubtitle = styled.div`
 `
 
 export const HeaderContacts = styled.ul`
-  display: flex;
-  flex-direction: column;
+  font-size: 1rem;
   list-style: none;
   margin: 0;
   margin-left: auto;
-  font-weight: 300;
-  font-size: 1rem;
   margin-top: .75rem;
+  display: flex;
+  flex-direction: column;
   
   
-  @media (max-width: ${titleBreakpoint}) {
+  @media (max-width: ${titleBreakpoint}rem) {
     flex-direction: row;
-    margin-left: unset;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
   }
   
   li {
@@ -112,6 +118,7 @@ export const HeaderContacts = styled.ul`
     }
 
     a {
+      color: ${theme.linkColor};
       font-family: 'Roboto Slab';
       font-width: 900;
       text-decoration: none;
@@ -127,7 +134,7 @@ export const HeaderContacts = styled.ul`
 `
 
 export const Separator = styled.div`
-  border-top: .0625rem solid ${textColor};
+  border-top: .0625rem solid ${baseColor};
   margin: 3rem 0 5rem;
 `
 
@@ -148,7 +155,7 @@ export const Content = styled.div`
   & > aside {
     flex-shrink: 0;
 
-    @media (min-width: ${theme.headerBreakpoint}rem) {
+    @media (min-width: ${theme.headerBreakpoint + .0625}rem) {
       max-width: 13rem;
       margin-right: 2rem;
     }
@@ -157,7 +164,7 @@ export const Content = styled.div`
   @media (max-width: ${theme.headerBreakpoint}rem) {
     flex-direction: column;
 
-    & > aside {
+    & > aside { 
       width: 100%;
     }
   }
@@ -211,7 +218,7 @@ export const ContentTitle = styled.div`
 `
 
 export const Job = styled.div`
-  margin-bottom: 2.1875rem;
+  margin-top: 2.5rem;
   font-size: 0.875rem;
 `
 
@@ -219,6 +226,10 @@ export const JobDetails = styled.div`
   color: ${subtitleColor};
   font-size: 0.875rem;
   font-weight: 700;
+
+  @media (max-width: ${theme.headerBreakpoint}rem) {
+    display: none;
+  }
 `
 
 export const CompanyName = styled.div`

@@ -6,14 +6,13 @@ import Wrap from "../wrap"
 
 const Wrapper = nest(
   styled.div`
-    color: ${theme.lighterBGTextColor};
+    font-size: 1rem;
+    background-color: ${theme.lightColor};
+    font-family: ${theme.titleFont};
     padding-top: ${p => (p.main ? `${theme.headerHeight + 2.8125}rem` : "2.8125rem")};
     padding-bottom: 2.8125rem;
-    font-family: ${theme.titleFont};
     position: relative;
     top: ${p => (p.main ? `-${theme.headerHeight}rem` : "0")};
-    font-size: 1rem;
-    background-color: ${theme.lightishBGColor};
 
     @media (min-width: 80rem) {
       font-size: 1.25rem;
@@ -30,7 +29,7 @@ const Wrapper = nest(
       flex-direction: column;
 
       * {
-        color: ${theme.lighterBGColor} !important;
+        color: ${theme.lightColor} !important;
       }
     `};
   `,
@@ -50,7 +49,7 @@ const Hero = styled.div`
   font-size: 8.25rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
-  color: ${theme.highlightedTextColor};
+  color: ${theme.textColor};
 
   @media (max-width: 46.25rem) {
     font-size: 5rem;
@@ -61,12 +60,13 @@ const Title = styled.div`
   font-size: 1.875rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
-  color: ${theme.highlightedTextColor};
-`
-
-const SubtitleWrapper = styled.div`
+  color: ${theme.textColor};
+  `
+  
+  const SubtitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  color: ${theme.textColor};
 `;
 
 const Subtitle = styled.span`

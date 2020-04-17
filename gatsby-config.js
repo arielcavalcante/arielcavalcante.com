@@ -21,7 +21,7 @@ module.exports = {
         name: "ariel cavalcante | product designer",
         short_name: "arielcavalcante.io",
         start_url: "/",
-        background_color: "#F5E4C3",
+        background_color: "#FCECCC",
         theme_color: "#34A7B2",
         display: "minimal-ui",
         icon: "static/favicon.png",
