@@ -3,13 +3,13 @@ import React from "react"
 function GlobeIcon() {
   return (
     <svg
-      ariaHidden="true"
-      focusable="false"
-      dataPrefix="fas"
-      dataIcon="globe-americas"
+      aria-hidden="true"
+      data-prefix="fas"
+      data-icon="globe-americas"
       role="img"
-      xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
       viewBox="0 0 496 512"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fill="currentColor"

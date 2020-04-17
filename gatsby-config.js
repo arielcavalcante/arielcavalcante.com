@@ -8,6 +8,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/`,
+        ignore: [`**/\.*`],
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "ariel cavalcante | product designer",
@@ -30,5 +38,6 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-catch-links",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-json",
   ]
 }

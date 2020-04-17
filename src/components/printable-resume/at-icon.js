@@ -3,13 +3,13 @@ import React from "react"
 function AtIcon() {
   return (
     <svg
-      ariaHidden="true"
-      focusable="false"
-      dataPrefix="fal"
-      dataIcon="at"
+      aria-hidden="true"
+      data-prefix="fal"
+      data-icon="at"
       role="img"
-      xmlns="http://www.w3.org/2000/svg"
+      focusable="false"
       viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fill="currentColor"

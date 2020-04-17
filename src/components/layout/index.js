@@ -20,8 +20,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding: 0;
-    margin: 0;
+    margin: auto;
     -webkit-font-smoothing: subpixel-antialiased;
+    opacity: 0;
   }
   
   ul {
@@ -40,7 +41,6 @@ const Wrapper = styled.div`
   color: ${theme.textColor};
   font-family: ${theme.textFont};
   background-color: ${theme.lighterBGColor};
-  opacity: 0;
   transition: opacity 300ms linear;
   border-bottom: 0.5rem solid ${theme.baseColor};
   a {
@@ -86,9 +86,9 @@ const Layout = ({ children, "*": page }) => {
     <>
       <GlobalStyle />
       {page === "cv" ? (
-        <div id="root">{children}</div>
+        <div id="body">{children}</div>
       ) : (
-        <Wrapper id="root">
+        <Wrapper id="body">
           <Header showShadow={showHeaderShadow} />
           <Body>{children}</Body>
           <Footer />
