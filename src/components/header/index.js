@@ -21,8 +21,7 @@ const Wrapper = nest(
     height: ${theme.headerHeight}rem;
     background-color: ${p =>
       p.showShadow ? theme.darkColor : "transparent"};
-    color: ${p =>
-      p.showShadow ? theme.lightColor : theme.baseColor};
+    color: ${theme.lightColor};
     user-select: none;
     font-family: ${theme.titleFont};
     box-shadow: ${p =>

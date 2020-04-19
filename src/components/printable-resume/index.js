@@ -68,7 +68,7 @@ const PrintableResume = () => {
   return (
     <Wrapper>
       <GlobalStyle />
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&family=Roboto:wght@500;700"
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&family=Roboto+Slab:wght@700"
         rel="stylesheet"
         type="text/css"
       />

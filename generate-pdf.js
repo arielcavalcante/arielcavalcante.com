@@ -11,14 +11,20 @@ async function generatePDF() {
   const page = await browser.newPage()
 
   await page.goto("http://localhost:9615/cv")
-  await new Promise(r => setTimeout(r, 2000))
+  await new Promise((r) => setTimeout(r, 2000))
 
   await page.pdf({
     path: "./public/cv.pdf",
-    printBackground: false,
-    width: "1105px",
+    printBackground: true,
+    width: "1305px",
     height: "1650px",
-    pageRanges: "1-1"
+    pageRanges: "1-1",
+    margin: {
+      top: 30,
+      right: 50,
+      bottom: 30,
+      left: 50,
+    }
   })
 
   await browser.close()

@@ -9,7 +9,7 @@ import Body from "../body"
 
 const GlobalStyle = createGlobalStyle`
   html {
-    box-sizing: border-box;
+    box-sizing: content-box;
   }
 
   *,
@@ -50,7 +50,17 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
   }
+
+  [class*="__Wrapper404"] {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 
   a {
     color: inherit;

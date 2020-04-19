@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 import theme from "../../theme"
 
+const textFont = theme.textFont
 const titleFont = theme.titleFont
 const baseColor = theme.darkColor
 const subtitleColor = theme.darkColor
@@ -11,38 +12,41 @@ const titleBreakpoint = "55";
 
 export const GlobalStyle = createGlobalStyle`
   body {
+    width: 100%;
     font-size: 1rem;
-    font-family: "Roboto Slab";
+    font-family: ${textFont};
     color: ${theme.textColor};
-    background-color: ${theme.lighterColor};
-  }
-  `
+    background-color: #fff;
   
-  export const Wrapper = styled.div`
-    margin: 3.625rem;
-    width: 85%;
-    height: 100%;
-
-    @media print {
-      margin: auto;
-      transform: scale(1);
-      width: 1105px,
-      height: 1650px,
+    @media screen {
+      background-color: ${theme.lighterColor};
     }
-    `
-    
+  }
+`
+  
+export const Wrapper = styled.div`
+  max-width: 69.375rem;
+  padding: 1.25rem 3.125rem;
+  margin: .625rem auto;
+`
+
 export const TagList = styled.ul`
   list-style: none;
   padding: 0 !important;
+  padding-right: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: baseline;
 
+  @media screen (min-width: ${titleBreakpoint + .0625}rem) {
+    margin-right: 2rem;
+  }
+
   li {
     flex-grow: 1;
-    margin: .325rem;
+    margin: .3125rem;
     color: ${textColor};
     font-weight: 500;
     font-size: .875rem;
@@ -53,9 +57,15 @@ export const TagList = styled.ul`
     padding: .25rem .5rem;
     border-radius: .25rem;
     display: block;
+    -webkit-print-color-adjust: exact;
+    
+    @media screen (max-width: ${titleBreakpoint}rem) {
+      margin: .3125rem;
+      padding: .5rem .75rem;
+    }
     
     @media print {
-      -webkit-print-color-adjust: exact;
+      background-color: transparent;
       border: solid .0625rem ${secondaryColor};
     }
   }
@@ -67,7 +77,7 @@ export const Header = styled.header`
   align-items: baseline;
   white-space: nowrap;
 
-  @media (max-width: ${titleBreakpoint}rem) {
+  @media screen (max-width: ${titleBreakpoint}rem) {
     flex-direction: column;
   }
 `
@@ -85,27 +95,23 @@ export const HeaderSubtitle = styled.div`
   font-weight: 300;
   font-size: 1.25rem;
   letter-spacing: .00625rem;
-  padding-left: 0.125rem;
+  margin: .125rem 0;
 `
 
 export const HeaderContacts = styled.ul`
   font-size: 1rem;
   list-style: none;
-  margin: 0;
   margin-left: auto;
-  margin-top: .75rem;
-  display: flex;
-  flex-direction: column;
-  
-  
-  @media (max-width: ${titleBreakpoint}rem) {
+  display: block;
+
+  @media screen (max-width: ${titleBreakpoint}rem) {
     flex-direction: row;
     margin: 2rem auto 0;
   }
   
   li {
     display: inline-block;
-    padding: .125rem .25rem;
+    padding: .25rem;
     margin-bottom: .25rem;
     text-align: right;
     
@@ -135,7 +141,7 @@ export const HeaderContacts = styled.ul`
 
 export const Separator = styled.div`
   border-top: .0625rem solid ${baseColor};
-  margin: 3rem 0 5rem;
+  margin: 3rem 0 4rem;
 `
 
 export const Content = styled.div`
@@ -144,7 +150,7 @@ export const Content = styled.div`
 
   main {
     & > div:first-of-type {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
 
@@ -153,18 +159,13 @@ export const Content = styled.div`
   }
 
   & > aside {
+    margin-right: 2rem;
     flex-shrink: 0;
-
-    @media (min-width: ${theme.headerBreakpoint + .0625}rem) {
-      max-width: 13rem;
-      margin-right: 2rem;
-    }
-  }
-
-  @media (max-width: ${theme.headerBreakpoint}rem) {
-    flex-direction: column;
-
-    & > aside { 
+    min-width: 13rem;
+    max-width: 15rem;
+    
+    @media screen (max-width: ${titleBreakpoint}rem) {
+      flex-direction: column;
       width: 100%;
     }
   }
@@ -177,9 +178,12 @@ export const ContentSection = styled.div`
     display: flex;
     flex-direction: column;
   }
+  
+  @media screen (max-width: ${titleBreakpoint}rem) {
+  margin-bottom: 3.5rem;
 
-  @media (max-width: ${theme.headerBreakpoint}rem) {
     &:first-of-type ul {
+      justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
 
@@ -188,18 +192,12 @@ export const ContentSection = styled.div`
         margin: 0 2rem;
         display: block;
         white-space: nowrap;
-        font-size: 1.125rem;
         margin: .5rem;
       }
     }
 
     &:nth-of-type(4) {
       margin: 0 0 5rem 0;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0 !important;
     }
   }
 
@@ -226,22 +224,27 @@ export const JobDetails = styled.div`
   color: ${subtitleColor};
   font-size: 0.875rem;
   font-weight: 700;
-
-  @media (max-width: ${theme.headerBreakpoint}rem) {
-    display: none;
-  }
 `
-
+  
 export const CompanyName = styled.div`
   font-size: 1rem;
   font-weight: 900;
-`
+  margin-bottom: .125rem;
 
+  @media screen (max-width: ${titleBreakpoint}rem) {
+    font-size: 1.125rem;
+  }
+`
+  
 export const JobDescription = styled.div`
   padding-top: 0.625rem;
   font-weight: 500;
-
+  
   p {
     margin: 0 0 0.625rem 0;
+  }
+
+  @media screen (max-width: ${titleBreakpoint}rem) {
+    font-weight: 500;
   }
 `
