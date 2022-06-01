@@ -47,7 +47,7 @@
     "recompose": "^0.30.0",
     "rehype-react": "^5.0.1",
     "serve-handler": "^6.1.2",
-    "sharp": "^0.25.2",
+    "sharp": "^0.30.5",
     "smoothscroll": "^0.4.0",
     "styled-components": "^5.0.1",
     "webfontloader": "^1.6.28"
